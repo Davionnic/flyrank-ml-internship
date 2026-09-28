@@ -1,0 +1,91 @@
+{
+  "assignment": "ML-10",
+  "lane": "Refresh / Content Opportunity Scoring",
+  "label": "is_declining_label = (trend_direction == 'down')",
+  "split": "client_holdout",
+  "random_state": 42,
+  "test_clients": [
+    "client_0b918943df",
+    "client_1a6562590e",
+    "client_4fc82b26ae",
+    "client_98a3ab7c34",
+    "client_d4735e3a26",
+    "client_f74efabef1"
+  ],
+  "train_rows": 27675,
+  "test_rows": 2325,
+  "best_model": "random_forest",
+  "precision_at_20_holdout": 0.7,
+  "precision_at_50_holdout": 0.68,
+  "average_precision_holdout": 0.61,
+  "roc_auc_holdout": 0.747,
+  "baseline_precision_at_20_holdout": 0.15,
+  "baseline_precision_at_50_holdout": 0.24,
+  "holdout_base_rate": 0.391,
+  "holdout_top50_proxy_positives": 34,
+  "rows_scored": 30000,
+  "action_mix": {
+    "monitor": 13264,
+    "refresh": 8040,
+    "refresh_and_review_ctr": 6646,
+    "refresh_and_review_engagement": 1968,
+    "expand_and_refresh": 82
+  },
+  "confidence_mix": {
+    "low": 15000,
+    "medium": 11368,
+    "high": 3632
+  },
+  "top_reason_codes": [
+    {
+      "reason": "declining_with_demand",
+      "count": 13152
+    },
+    {
+      "reason": "visible_model_opportunity",
+      "count": 10590
+    },
+    {
+      "reason": "low_ctr_visible_page",
+      "count": 9759
+    },
+    {
+      "reason": "ctr_review_candidate",
+      "count": 9759
+    },
+    {
+      "reason": "general_refresh_review",
+      "count": 9117
+    },
+    {
+      "reason": "model_decline_risk",
+      "count": 7927
+    },
+    {
+      "reason": "page_one_decay_risk",
+      "count": 7076
+    },
+    {
+      "reason": "low_engagement_visible_page",
+      "count": 6508
+    },
+    {
+      "reason": "engagement_review_candidate",
+      "count": 6508
+    },
+    {
+      "reason": "thin_visible_page",
+      "count": 82
+    },
+    {
+      "reason": "stale_visible_page",
+      "count": 17
+    }
+  ],
+  "score_blend": {
+    "model_probability": 0.7,
+    "baseline_normalized": 0.3
+  },
+  "claim_stance": "decision-support ranking, not causal SEO",
+  "sklearn_version": "1.9.1"
+}
