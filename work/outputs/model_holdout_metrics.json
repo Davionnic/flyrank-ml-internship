@@ -1,0 +1,114 @@
+{
+  "assignment": "ML-08",
+  "lane": "Refresh / Content Opportunity Scoring",
+  "label": "is_declining_label = (trend_direction == 'down')",
+  "split": "client_holdout",
+  "random_state": 42,
+  "test_clients": [
+    "client_0b918943df",
+    "client_1a6562590e",
+    "client_4fc82b26ae",
+    "client_98a3ab7c34",
+    "client_d4735e3a26",
+    "client_f74efabef1"
+  ],
+  "train_rows": 27675,
+  "test_rows": 2325,
+  "base_rate_full": 0.5420666666666667,
+  "base_rate_test": 0.3909677419354839,
+  "feature_count": 52,
+  "sklearn_version": "1.9.1",
+  "baseline_precision_at_20_holdout": 0.15,
+  "baseline_precision_at_50_holdout": 0.24,
+  "models": {
+    "logistic_regression": {
+      "precision_at_10": 0.2,
+      "precision_at_20": 0.35,
+      "precision_at_50": 0.4,
+      "precision_at_100": 0.44,
+      "average_precision": 0.5215418768632023,
+      "roc_auc": 0.7002914980763613
+    },
+    "decision_tree": {
+      "precision_at_10": 0.6,
+      "precision_at_20": 0.65,
+      "precision_at_50": 0.66,
+      "precision_at_100": 0.68,
+      "average_precision": 0.5753189989001579,
+      "roc_auc": 0.7415203737887913
+    },
+    "random_forest": {
+      "precision_at_10": 0.9,
+      "precision_at_20": 0.7,
+      "precision_at_50": 0.68,
+      "precision_at_100": 0.7,
+      "average_precision": 0.6100580703940904,
+      "roc_auc": 0.7473724773607304
+    }
+  },
+  "best_model": "random_forest",
+  "best_model_precision_at_50_holdout": 0.68,
+  "best_model_top_features": [
+    {
+      "feature": "log_impressions_90d",
+      "importance": 0.13190374413742684
+    },
+    {
+      "feature": "days_with_impressions",
+      "importance": 0.13043802598989937
+    },
+    {
+      "feature": "avg_position",
+      "importance": 0.11109646098905157
+    },
+    {
+      "feature": "content_age_days",
+      "importance": 0.09081736630658925
+    },
+    {
+      "feature": "age_tier_365+",
+      "importance": 0.037600495105310563
+    },
+    {
+      "feature": "word_count",
+      "importance": 0.03679201497330713
+    },
+    {
+      "feature": "log_clicks_90d",
+      "importance": 0.036496711846022156
+    },
+    {
+      "feature": "char_count",
+      "importance": 0.03626671540290393
+    },
+    {
+      "feature": "days_with_sessions",
+      "importance": 0.035030745283458446
+    },
+    {
+      "feature": "ctr",
+      "importance": 0.034295272271569324
+    },
+    {
+      "feature": "scroll_rate",
+      "importance": 0.033619592093672296
+    },
+    {
+      "feature": "days_since_last_update",
+      "importance": 0.02658182587583258
+    },
+    {
+      "feature": "log_sessions_90d",
+      "importance": 0.02596673374319629
+    },
+    {
+      "feature": "position_tier_top_3",
+      "importance": 0.02420172370703859
+    },
+    {
+      "feature": "age_tier_91-180",
+      "importance": 0.01946777947347787
+    }
+  ],
+  "holdout_top50_positives": 34
+}
