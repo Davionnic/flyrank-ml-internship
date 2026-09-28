@@ -1,0 +1,30 @@
+{
+  "assignment": "ML-07",
+  "lane": "Refresh / Content Opportunity Scoring",
+  "label": "is_declining_label = (trend_direction == 'down')",
+  "split": "client_holdout",
+  "random_state": 42,
+  "test_clients": [
+    "client_0b918943df",
+    "client_1a6562590e",
+    "client_4fc82b26ae",
+    "client_98a3ab7c34",
+    "client_d4735e3a26",
+    "client_f74efabef1"
+  ],
+  "train_rows": 27675,
+  "test_rows": 2325,
+  "base_rate_full": 0.5420666666666667,
+  "base_rate_test": 0.3909677419354839,
+  "precision_at_10_holdout": 0.2,
+  "precision_at_20_holdout": 0.15,
+  "precision_at_50_holdout": 0.24,
+  "declining_rate_top_50_full": 0.34,
+  "score_formula": {
+    "visibility_score": 0.4,
+    "freshness_risk_score": 0.3,
+    "position_opportunity_score": 0.25,
+    "depth_gap_score": 0.05
+  },
+  "output_csv": "work/outputs/baseline_action_score.csv"
+}
