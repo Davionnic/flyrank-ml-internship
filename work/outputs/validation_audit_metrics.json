@@ -1,0 +1,25 @@
+{
+  "assignment": "ML-09",
+  "lane": "Refresh / Content Opportunity Scoring",
+  "label": "is_declining_label = (trend_direction == 'down')",
+  "model": "random_forest",
+  "random_state": 42,
+  "split_before": "random_stratified_row",
+  "precision_at_50_before_random": 0.9,
+  "base_rate_before_random": 0.5419354838709678,
+  "split_after": "client_holdout",
+  "precision_at_50_after_client": 0.68,
+  "base_rate_after_client": 0.3909677419354839,
+  "precision_at_50_gap_random_minus_client": 0.21999999999999997,
+  "baseline_precision_at_50_client_holdout": 0.24,
+  "holdout_top50_proxy_positives": 34,
+  "leak_trend_pct_precision_at_50": 1.0,
+  "leak_last_prev_30d_precision_at_50": 1.0,
+  "forbidden_overlap": [],
+  "paper_findings_audited": [
+    "Finding #4 Freshness Multiplier (3.2x health / 57x impressions)",
+    "ML appendix RF predicting health_score (circular composite)"
+  ],
+  "claim_stance": "observed / measured / directional / decision-support",
+  "sklearn_version": "1.9.1"
+}
